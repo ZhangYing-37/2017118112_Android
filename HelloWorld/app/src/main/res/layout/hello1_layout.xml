@@ -7,6 +7,7 @@
     tools:context=".HelloWorld1">
 
     <TextView
+        android:id="@+id/helloText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello1!"
@@ -32,6 +33,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hello2" />
+
+        <Button
+            android:id="@+id/Tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tip" />
+
+        <Button
+            android:id="@+id/dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dialog" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

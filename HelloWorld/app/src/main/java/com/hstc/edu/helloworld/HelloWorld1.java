@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class HelloWorld1 extends AppCompatActivity {
 
@@ -19,6 +20,8 @@ public class HelloWorld1 extends AppCompatActivity {
         setContentView(R.layout.hello1_layout);
         Button hello1 = (Button) findViewById(R.id.Hello1);
         Button hello2 = (Button) findViewById(R.id.Hello2);
+        Button tip = (Button) findViewById(R.id.Tip);
+        Button startDialogActivity = (Button) findViewById(R.id.dialog);
         hello1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -30,6 +33,19 @@ public class HelloWorld1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HelloWorld1.this, HelloWorld2.class);
+                startActivity(intent);
+            }
+        });
+        tip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(HelloWorld1.this, "Hello World1", Toast.LENGTH_SHORT).show();
+            }
+        });
+        startDialogActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HelloWorld1.this, DialogActivity.class);
                 startActivity(intent);
             }
         });
