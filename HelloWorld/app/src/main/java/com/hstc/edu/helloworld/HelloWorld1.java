@@ -11,12 +11,15 @@ import android.widget.Toast;
 
 public class HelloWorld1 extends AppCompatActivity {
 
-    public static final String TAG = "HelloWorld1";
-
+    private static int num=0;
+    private int num1;
+    public static String TAG = "HelloWorld1";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d(TAG,"onCreate");
+        num++;
+        num1=num;
+        Log.d(TAG+"_"+num1,"onCreate");
         setContentView(R.layout.hello1_layout);
         Button hello1 = (Button) findViewById(R.id.Hello1);
         Button hello2 = (Button) findViewById(R.id.Hello2);
@@ -25,6 +28,7 @@ public class HelloWorld1 extends AppCompatActivity {
         hello1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent = new Intent(HelloWorld1.this, HelloWorld1.class);
                 startActivity(intent);
             }
@@ -53,36 +57,37 @@ public class HelloWorld1 extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d(TAG,"onStart");
+        Log.d(TAG+"_"+num1,"onStart");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d(TAG,"onResume");
+        Log.d(TAG+"_"+num1,"onResume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d(TAG,"onPause");
+        Log.d(TAG+"_"+num1,"onPause");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d(TAG,"onStop");
+        Log.d(TAG+"_"+num1,"onStop");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d(TAG,"onDestroy");
+        Log.d(TAG+"_"+num1,"onDestroy");
+        num--;
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.d(TAG,"onRestart");
+        Log.d(TAG+"_"+num1,"onRestart");
     }
     }
