@@ -3,6 +3,7 @@ package com.hstc.edu.helloworld;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -24,7 +25,10 @@ public class HelloWorld1 extends AppCompatActivity {
         Button hello1 = (Button) findViewById(R.id.Hello1);
         Button hello2 = (Button) findViewById(R.id.Hello2);
         Button tip = (Button) findViewById(R.id.Tip);
-        Button startDialogActivity = (Button) findViewById(R.id.dialog);
+        final Button startDialogActivity = (Button) findViewById(R.id.dialog);
+        Button browser = (Button) findViewById(R.id.browser);
+        Button phone = (Button) findViewById(R.id.phone);
+        Button map = (Button) findViewById(R.id.map);
         hello1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,6 +54,30 @@ public class HelloWorld1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HelloWorld1.this, DialogActivity.class);
+                startActivity(intent);
+            }
+        });
+        browser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://www.baidu.com"));
+                startActivity(intent);
+            }
+        });
+        phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               Intent intent = new Intent(Intent.ACTION_DIAL);
+               intent.setData(Uri.parse("tel:10086"));
+               startActivity(intent);
+            }
+        });
+        map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("geo:"));
                 startActivity(intent);
             }
         });

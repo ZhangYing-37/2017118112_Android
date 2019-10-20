@@ -18,33 +18,67 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/ly1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="0dp"
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/Hello1"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/ly1_1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello1" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/Hello2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello2" />
+            <Button
+                android:id="@+id/Hello1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello1" />
 
-        <Button
-            android:id="@+id/Tip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tip" />
+            <Button
+                android:id="@+id/Hello2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello2" />
 
-        <Button
-            android:id="@+id/dialog"
-            android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/Tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tip" />
+
+            <Button
+                android:id="@+id/dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dialog" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly1_2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dialog" />
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/browser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="浏览器" />
+
+            <Button
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="拨号" />
+
+            <Button
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="地图" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
