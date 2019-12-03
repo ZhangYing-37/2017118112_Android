@@ -13,7 +13,7 @@
             android:theme="@style/Theme.AppCompat.Dialog">
         </activity>
         <activity android:name=".HelloWorld2" />
-        <activity android:name=".HelloWorld1" android:launchMode="singleInstance">
+        <activity android:name=".HelloWorld1" android:launchMode="standard">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
