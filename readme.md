@@ -5,12 +5,13 @@
 文件夹HelloWorld：
 作业2：两个活动之间切换
 作业3：隐式intent召唤浏览器，地图和拨号
+作业4：活动切换方式
 
 文件夹RecyclerViewTest2：
-作业4：增删改程序
+作业5：增删改程序
 
 文件夹AndroidThreadTest：
-作业5：多线程自加
+作业6：多线程自加
 
 
 
